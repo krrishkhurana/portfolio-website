@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* Resume Button */}
           <div className="hidden md:block">
             <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
-              <a href="public/krrish specialized cv319.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+              <a href="src/asesst/krrish specialized cv319.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
             </Button>
           </div>
         </div>
@@ -85,7 +85,7 @@ const Navbar = () => {
               ))}
               <li className="pt-2">
                 <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
-                  <a href="/krrish-resume.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+                  <a href="src/asesst/krrish specialized cv319.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
                 </Button>
               </li>
             </ul>
