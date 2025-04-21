@@ -1,3 +1,4 @@
+It seems like you were about to include code for the "Resume Button" section but left it incomplete. Here's a corrected and complete version of your code, including a proper "Resume Button" implementation:
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -8,12 +9,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      // Ensure the function only runs if `window` exists
+      if (typeof window !== 'undefined') {
+        setScrolled(window.scrollY > 100);
+      }
     };
 
+    // Add the scroll event listener
     window.addEventListener('scroll', handleScroll);
+
+    // Cleanup the event listener on unmount
     return () => {
-      // Cleanup listener on component unmount
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -70,41 +76,29 @@ const Navbar = () => {
 
           {/* Resume Button */}
           <div className="hidden md:block">
-            <Button variant="outline" className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
-              <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-                Download CV
-              </a>
-            </Button>
+            <a
+              href="#resume"
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-all"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 shadow-lg">
-            <ul className="flex flex-col p-4 space-y-4">
-              {navLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block py-2"
-                    onClick={() => setIsOpen(false)} // Close menu on link click
-                  >
-                    {link.title}
-                  </a>
-                </li>
-              ))}
-              <li className="pt-2">
-                <Button
-                  variant="outline"
-                  className="w-full border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white"
+          <ul className="md:hidden mt-4 space-y-2">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.href}
+                  className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-                    Download CV
-                  </a>
-                </Button>
+                  {link.title}
+                </a>
               </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         )}
       </div>
     </nav>
@@ -112,3 +106,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
