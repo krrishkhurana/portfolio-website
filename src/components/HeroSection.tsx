@@ -33,7 +33,11 @@ const HeroSection = () => {
               <div className="bg-white dark:bg-gray-900 rounded-full p-2">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700">
                   <img 
+<<<<<<< Updated upstream
                     src="public/WhatsApp Image 2025-04-20 at 00.22.12_89139d64.jpg" 
+=======
+                    src="public\phot.jpg" 
+>>>>>>> Stashed changes
                     alt="Krrish Khurana" 
                     className="w-full h-full object-cover"
                   />
