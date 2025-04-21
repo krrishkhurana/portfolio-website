@@ -32,10 +32,7 @@ const HeroSection = () => {
             <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-full p-1 shadow-xl">
               <div className="bg-white dark:bg-gray-900 rounded-full p-2">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-700">
-                  <img 
-                    src="public\phot.jpg" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="public/phot.jpg" className="w-full h-full object-cover />
                 </div>
               </div>
             </div>
