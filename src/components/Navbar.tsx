@@ -76,10 +76,10 @@ const Navbar = () => {
           {/* Resume Button */}
           <div className="hidden md:block">
             <a
-              href="#resume"
+              href="https://drive.google.com/file/d/1STckz_NZ2uQrRGxkIBoNor49tVyH6Yvx/view?usp=sharing"
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-all"
             >
-              Download Resume
+              Download CV
             </a>
           </div>
         </div>
