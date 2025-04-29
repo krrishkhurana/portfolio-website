@@ -1,4 +1,3 @@
-It seems like you were about to include code for the "Resume Button" section but left it incomplete. Here's a corrected and complete version of your code, including a proper "Resume Button" implementation:
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
